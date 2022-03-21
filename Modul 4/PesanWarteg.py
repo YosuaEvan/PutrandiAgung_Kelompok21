@@ -1,4 +1,5 @@
 # ==================================
+# Identitas Kelompok: 
 # Yosua Evan Yudha (21120121120003)
 # Valentinus Aryo Saputro (21120121140100)
 # Putrandi Agung Prabowo (21120121130074)
@@ -6,6 +7,9 @@
 # Kelompok: 21
 # Shift: 2
 # ==================================
+
+def tidak_ada_uang():
+    print("Maaf kamu tidak memiliki uang yang cukup")
 
 print("----------- Warteg'21 -----------")
 
@@ -35,7 +39,7 @@ while (pesan_makanan == True):
             print("Kamu telah membeli menu " + makanan[choice1-1][0] + " sebanyak " + str(totalchoice1) + " porsi dan kamu memiliki sisa uang Rp." + str(uang))
             pesan_makanan = False
         else:
-            print("Kamu tidak memiliki cukup uang, coba pesan menu lain atau kurangi porsi yang ingin kamu beli")
+            tidak_ada_uang()
 
 print("\nMenu Minuman: \n" 
     + "1. Teh Manis (Rp6.000)\n"
@@ -57,7 +61,7 @@ while (pesan_minuman == True):
             print("Kamu telah membeli menu " + minuman[choice2-1][0] + " sebanyak " + str(totalchoice2) + " buah dan kamu memiliki sisa uang Rp." + str(uang))
             pesan_minuman = False
         else:
-            print("Kamu tidak memiliki cukup uang, coba pesan menu lain atau kurangi jumlah minuman yang ingin kamu beli")
+           tidak_ada_uang()
 
 print("\nKamu telah memesan " + makanan[choice1-1][0] + " " + str(totalchoice1) + " porsi dan " + minuman[choice2-1][0] + " " + str(totalchoice2) + " buah")
 print("Selamat menikmati!")
